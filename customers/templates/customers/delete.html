@@ -1,0 +1,18 @@
+{% extends 'myadmin/base.html' %}
+
+{% block content %}
+<h1 style="text-align:center;">Are you sure want to delete {{name}} details</h1>
+<hr>
+
+
+<form action="/myadmin/customers/delete/{{name.id}}/" method="POST"><!--action is optional blc admin_views.py ma POST bata check garxa-->
+
+    <a href="/myadmin/customers/" class="btn btn-danger">Cancel</a>
+
+    {% csrf_token %}
+
+    <button type="submit" class="btn btn-success">Confirm</button><!--when i submit then it goes to action -->
+
+</form>
+
+{% endblock %}

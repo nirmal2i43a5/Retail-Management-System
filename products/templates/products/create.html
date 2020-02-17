@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Products {% endblock %}
+
+{% block content %}
+
+<form method="POST" action="">
+
+    <!-- <div class="row">
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" required />
+        
+        
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" required />
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input type="text" class="form-control" required />
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" class="form-control" required />
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+
+            {{form.as_p}}
+            {% csrf_token %}
+
+ <button type="submit" class="btn btn-danger">Save</button>
+
+</form>
+
+
+
+
+{% endblock %}
